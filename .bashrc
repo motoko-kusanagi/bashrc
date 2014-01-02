@@ -4,7 +4,7 @@
 export EDITOR=nano
 
 # variables
-net1=p2p1
+net1=eth0
 
 # dashboard
 echo -e "  "
@@ -28,6 +28,9 @@ alias gs='git status'
 # user specific functions
 
 # source global definitions
+if [ -f /etc/bash_completion ]; then
+ . /etc/bash_completion
+fi
 
 # ps1 prompt
 export PS1="\[\e[00;32m\]>\[\e[0m\]\[\e[00;37m\] \u \[\e[0m\]\[\e[00;33m\]/\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;34m\]\W\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;32m\]\$\[\e[0m\] "
